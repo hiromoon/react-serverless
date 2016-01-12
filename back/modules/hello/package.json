@@ -12,6 +12,8 @@
   "keywords": [],
   "devDependencies": {},
   "dependencies": {
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
     "serverless-helpers-js": "~0.0.3"
   }
 }
