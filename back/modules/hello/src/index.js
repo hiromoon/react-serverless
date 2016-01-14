@@ -11,5 +11,5 @@ var testComponent = React.createClass({
 });
 
 module.exports.respond = function(event, cb) {
-  return cb(null, React.renderToStaticMarkup(<testComponent />));
+  return cb(null, React.renderToStaticMarkup(<span className="testComponent">"hello"</span>));
 };

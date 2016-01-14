@@ -7,7 +7,7 @@
       },
       "handler": "modules/hello/hello/handler.handler",
       "timeout": 6,
-      "memorySize": 1024,
+      "memorySize": 128,
       "eventSourceArn": "",
       "endpoints": [
         {
@@ -26,7 +26,7 @@
             "default": {
               "statusCode": "200",
               "responseParameters": {
-                "integration.response.header.Content-Type": "'text/html'" 
+                "method.response.header.Content-Type": "'text/html'" 
               },
               "responseModels": {},
               "responseTemplates": {
