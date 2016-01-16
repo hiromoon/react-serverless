@@ -1,10 +1,8 @@
 'use strict';
 
-/**
- * Lib
- */
 var React = require('react');
 var ReactDOM = require('react-dom');
+var ReactDOMServer = require('react-dom/server');
 
 var testComponent = React.createClass({
   displayName: 'testComponent',
@@ -18,11 +16,10 @@ var testComponent = React.createClass({
   }
 });
 
+//var view = React.renderToStaticMarkup(<testComponent />);
+var view = ReactDOMServer.renderToString(React.createElement('testComponent', null));
+
 module.exports.respond = function (event, cb) {
-  return cb(null, React.renderToStaticMarkup(React.createElement(
-    'span',
-    { className: 'testComponent' },
-    '"hello"'
-  )));
+  return cb(null, view);
 };
 
