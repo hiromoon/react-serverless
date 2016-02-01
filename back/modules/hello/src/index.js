@@ -1,15 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ReactDOMServer = require('react-dom/server');
+var MUI = require('material-ui');
+var main = require('./serverside.react');
 
-var testComponent = React.createClass({
-  render: function() {
-            return <span className="testComponent">"hello"</span>;
-          }
-});
-
-//var view = React.renderToStaticMarkup(<testComponent />);
-var view = ReactDOMServer.renderToString(<testComponent />);
+var view = ReactDOMServer.renderToString(<main />);
 
 module.exports.respond = function(event, cb) {
   return cb(null, view);
