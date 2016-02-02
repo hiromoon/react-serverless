@@ -1,0 +1,6 @@
+{
+  "region": "ap-northeast-1",
+  "resourcesStackName": "serverless-react-dev-r",
+  "iamRoleArnLambda": "arn:aws:iam::815128299203:role/serverless-react-dev-r-IamRoleLambda-1BKS4BQIXWXFR",
+  "apiGatewayApi": "serverless-react"
+}

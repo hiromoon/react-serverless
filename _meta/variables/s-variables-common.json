@@ -1,0 +1,6 @@
+{
+  "project": "serverless-react",
+  "projectBucket": "serverless.ap-northeast-1.app.com",
+  "domain": "app.com",
+  "notificationEmail": "hiro@app.com"
+}

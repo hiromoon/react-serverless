@@ -1,0 +1,9 @@
+{
+  "name": "test",
+  "profile": "aws-v0.3.1",
+  "custom": {},
+  "cloudFormation": {
+    "resources": {},
+    "lambdaIamPolicyDocumentStatements": []
+  }
+}
