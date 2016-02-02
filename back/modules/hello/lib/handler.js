@@ -12,11 +12,20 @@ var ServerlessHelpers = require('serverless-helpers-js').loadEnv();
 
 // Require Logic
 var lib = require('../lib');
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+var testComponent = React.createFactory(React.createClass({
+  render: function() {
+    return (
+      <span>Hello, Severless!!</span>
+    );
+  }
+}))
 
 // Lambda Handler
 module.exports.handler = function(event, context) {
-
-  lib.respond(event, function(error, response) {
-    return context.done(error, response);
-  });
+  context.succeed(React.renderToStaticMarkup(ReactDOM.body(null,
+    testComponent(null)
+)));
 };
